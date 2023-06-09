@@ -35,7 +35,7 @@ const useAuthStore = create((set) => ({
     if (localStorage.getItem("token")) {
       const token = localStorage.getItem("token");
       try {
-        const res = await axios.get("http://localhost:8081/auth/auth", {
+        const res = await axios.get("https://g5-greenwheels-backend-2ilc.onrender.com/auth/auth", {
           headers: {
             "Content-Type": "application/json",
             Authorization: `Bearer ${token}`,

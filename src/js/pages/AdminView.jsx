@@ -39,7 +39,7 @@ function AdminAdd() {
     const body = vehicleData;
     try {
       const response = await axios.post(
-        "http://localhost:8081/vehicles", // Ensure this is the correct endpoint for file upload.
+        "https://g5-greenwheels-backend-2ilc.onrender.com/vehicles", // Ensure this is the correct endpoint for file upload.
         body,
         {
           headers: {

@@ -95,7 +95,7 @@ const ReservationView = () => {
       };
 
       const response = await axios.post(
-        "http://localhost:8081/booking",
+        "https://g5-greenwheels-backend-2ilc.onrender.com/booking",
         bookingData,
         {
           headers: { Authorization: `Bearer ${token}` },

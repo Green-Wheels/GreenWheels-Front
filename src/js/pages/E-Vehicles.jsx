@@ -69,7 +69,7 @@ function EVehicles() {
       }
 
       const response = await axios.get(
-        "http://localhost:8081/vehicles?" + queryParams.toString()
+        "https://g5-greenwheels-backend-2ilc.onrender.com/vehicles?" + queryParams.toString()
       );
       const aggregatedVehicles = aggregateVehicleData(
         response.data,
@@ -84,7 +84,7 @@ function EVehicles() {
   async function fetchVehicleCounts() {
     try {
       const response = await axios.get(
-        "http://localhost:8081/api/vehicleCounts"
+        "https://g5-greenwheels-backend-2ilc.onrender.com/api/vehicleCounts"
       );
       // console.log('Fetched vehicle counts:', response.data); // Neue Zeile
       setVehicleCounts(response.data);

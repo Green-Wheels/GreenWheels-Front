@@ -102,7 +102,7 @@ export default function EFahrzeugModal({
       return;
     }
     try {
-      const response = await fetch("http://localhost:8081/reservations", {
+      const response = await fetch("https://g5-greenwheels-backend-2ilc.onrender.com/reservations", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -130,7 +130,7 @@ export default function EFahrzeugModal({
     try {
       const token = localStorage.getItem("token"); // Replace with your token management method
       const response = await axios.delete(
-        `http://localhost:8081/reservations/${reservationId}`,
+        `https://g5-greenwheels-backend-2ilc.onrender.com/${reservationId}`,
         {
           headers: { Authorization: `Bearer ${token}` },
         }

@@ -20,7 +20,7 @@ function Card({
     async function fetchVehicle() {
       try {
         const response = await axios.get(
-          `http://localhost:8081/vehicles/${vehicleId}`
+          `https://g5-greenwheels-backend-2ilc.onrender.com/vehicles/${vehicleId}`
         ); // Ändern Sie hier die URL, um die Fahrzeugdetails abzurufen
         if (response.status === 200) {
           setVehicle(response.data);

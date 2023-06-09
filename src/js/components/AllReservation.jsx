@@ -11,7 +11,7 @@ const AllReservations = () => {
   const fetchReservations = async () => {
     try {
       const token = localStorage.getItem('token');
-      const response = await axios.get("http://localhost:8081/reservations", { headers: { Authorization: `Bearer ${token}` } });
+      const response = await axios.get("https://g5-greenwheels-backend-2ilc.onrender.com/reservations", { headers: { Authorization: `Bearer ${token}` } });
       setReservations(response.data);
     } catch (error) {
       console.error('Error fetching reservations:', error);

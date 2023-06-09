@@ -11,7 +11,7 @@ async function fetchBookings() {
     try {
       const token = localStorage.getItem("token"); // Replace with your token management method
       const response = await axios.get(
-        "http://localhost:8081/booking", {
+        "https://g5-greenwheels-backend-2ilc.onrender.com/booking", {
           headers: { Authorization: `Bearer ${token}` },
         }
       );

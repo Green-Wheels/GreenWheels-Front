@@ -22,7 +22,7 @@ function MainPage() {
   const introText =
     " Entdecken Sie mit uns die Zukunft der Mobilität - einfach, bequem und umweltbewusst. Buchen Sie Ihre nächste Fahrt mit unseren Elektrofahrzeugen und tragen Sie dazu bei, unseren Planeten zu schonen und die Lebensqualität in unseren Städten zu verbessern. Machen Sie den ersten Schritt in eine nachhaltige Zukunft und erleben Sie Mobilität neu !";
   useEffect(() => {
-    fetch("http://localhost:8081/vehicles")
+    fetch("https://g5-greenwheels-backend-2ilc.onrender.com/vehicles")
       .then((response) => response.json())
       .then((data) => setVehicles(data))
       .catch((error) => console.error(error));

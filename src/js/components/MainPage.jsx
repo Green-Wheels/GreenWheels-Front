@@ -12,7 +12,7 @@ function MainPage() {
 
 
   useEffect(() => {
-    fetch('http://localhost:8081/vehicles')
+    fetch('https://g5-greenwheels-backend-2ilc.onrender.com/vehicles')
       .then(response => response.json())
       .then(data => setVehicles(data))
       .catch(error => console.error(error));

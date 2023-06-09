@@ -23,7 +23,7 @@ function ClientBookings() {
 
     try {
       const response = await axios.post(
-        "http://localhost:8081/vehicles",
+        "https://g5-greenwheels-backend-2ilc.onrender.com/vehicles",
         vehicleData,
         {
           headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },

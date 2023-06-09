@@ -32,7 +32,7 @@ function Register(props) {
 
     // Sende Request an /register endpoint der API
     axios
-      .post("http://localhost:8081/auth/register", registrationData)
+      .post("https://g5-greenwheels-backend-2ilc.onrender.com/auth/register", registrationData)
       .then((response) => {
         console.log(response); // TODO
         setErrors([]);

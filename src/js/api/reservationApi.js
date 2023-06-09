@@ -36,7 +36,7 @@ export async function fetchReservations(userId) {
   export const getActiveReservations = async () => {
     try {
       const token = localStorage.getItem("token"); // Stellen Sie sicher, dass der Token dort gespeichert ist
-      const response = await axios.get('http://localhost:8081/reservations/active', {
+      const response = await axios.get('https://g5-greenwheels-backend-2ilc.onrender.com/reservations/active', {
         headers: { Authorization: `Bearer ${token}` },
       });
 
@@ -50,7 +50,7 @@ export async function fetchReservations(userId) {
   export const updateReservation = async (reservationId, updatedReservationData) => {
     try {
       const token = localStorage.getItem("token"); // Replace with your token management method
-      await axios.put(`http://localhost:8081/reservations/${reservationId}`, updatedReservationData, {
+      await axios.put(`https://g5-greenwheels-backend-2ilc.onrender.com/reservations/${reservationId}`, updatedReservationData, {
         headers: { Authorization: `Bearer ${token}` },
       });
      //  setReservations(updatedReservations);
@@ -62,7 +62,7 @@ export async function fetchReservations(userId) {
   export const bookReservation = async (reservationId) => {
     try {
       const token = localStorage.getItem("token"); // Replace with your token management method
-      await axios.post(`http://localhost:8081/booking/`, {reservationId}, {
+      await axios.post(`https://g5-greenwheels-backend-2ilc.onrender.com/booking/`, {reservationId}, {
         headers: { Authorization: `Bearer ${token}` },
       });
      //  setReservations(updatedReservations);
@@ -76,7 +76,7 @@ export async function fetchReservations(userId) {
     try {
       const token = localStorage.getItem("token"); // Replace with your token management method
       console.log(token)
-      await axios.put(`http://localhost:8081/reservations/book/${reservationId}`, {
+      await axios.put(`https://g5-greenwheels-backend-2ilc.onrender.com/reservations/book/${reservationId}`, {
         headers: { Authorization: `Bearer ${token}` },
       });
     } catch (error) {
