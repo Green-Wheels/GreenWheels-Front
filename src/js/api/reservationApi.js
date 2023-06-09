@@ -62,7 +62,7 @@ export async function fetchReservations(userId) {
   export const bookReservation = async (reservationId) => {
     try {
       const token = localStorage.getItem("token"); // Replace with your token management method
-      await axios.post(`https://g5-greenwheels-backend-2ilc.onrender.com/booking/`, {reservationId}, {
+      await axios.post(`https://g5-greenwheels-backend-2ilc.onrender.com/booking`, {reservationId}, {
         headers: { Authorization: `Bearer ${token}` },
       });
      //  setReservations(updatedReservations);
