@@ -3,7 +3,7 @@ import axios from "axios";
 export async function fetchReservations(userId) {
     try {
       const token = localStorage.getItem("token"); // Replace with your token management method
-      const response = await axios.get("http://localhost:8081/reservations", {
+      const response = await axios.get("https://g5-greenwheels-backend-2ilc.onrender.com/reservations", {
         headers: { Authorization: `Bearer ${token}` },
       });
       console.log(response)
@@ -21,7 +21,7 @@ export async function fetchReservations(userId) {
   export  const deleteReservation = async (reservationId) => {
     try {
       const token = localStorage.getItem("token"); // Replace with your token management method
-      await axios.delete(`http://localhost:8081/reservations/${reservationId}`, {
+      await axios.delete(`https://g5-greenwheels-backend-2ilc.onrender.com/reservations/${reservationId}`, {
         headers: { Authorization: `Bearer ${token}` },
       });
     } catch (error) {
