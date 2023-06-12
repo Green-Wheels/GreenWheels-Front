@@ -33,9 +33,9 @@ function MainPage() {
   return (
 
     <div className='pt-20 h-[95vh]'>
-        <div className="flex justify-between w-full bg-cover bg-no-repeat bg-[url('https://img.freepik.com/premium-photo/eco-car-forest-road-with-earth-planet-going-through-forest-ecosystem-ecology-healthy-environment-road-trip-travel-eco-car-with-nature-electric-car-earth-ev-electrical-energy-environment_35024-2448.jpg?w=2000')]	 px-1  md:w-auto h-[16vh] md:h-[20vh] lg:h-[25vh] xl:h-[40vh]"
+        <div className="flex justify-between w-full bg-cover bg-no-repeat px-1  md:w-auto h-[16vh] md:h-[20vh] lg:h-[25vh] xl:h-[40vh]"
             style={{
-                backgroundImage: "url('public/images/home.jpg')",
+              backgroundImage: "url('public/images/home.jpg')",
                 backgroundPositionY: "bottom",
                 backgroundPosition:"center",
                 backgroundSize: "auto",
