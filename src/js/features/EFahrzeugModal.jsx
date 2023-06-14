@@ -225,6 +225,12 @@ export default function EFahrzeugModal({
                   </td>
                 </tr>
                 <tr className="border-b dark:border-neutral-500">
+                  <td className="whitespace-nowrap  px-6 py-4 ">Reichweite</td>
+                  <td className="whitespace-nowrap  px-6 py-4">
+                    {driveRange} Km
+                  </td>
+                </tr>
+                <tr className="border-b dark:border-neutral-500">
                   <td className="whitespace-nowrap  px-6 py-4"> Preis </td>
                   <td colSpan="2" className="whitespace-nowrap  px-6 py-4">
                     {" "}

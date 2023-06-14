@@ -43,7 +43,7 @@ function Card({
       <div className="flex  justify-center items-center m-0 ">
         <div className=" p-4   rounded-lg  border-2  border-green-500 dark:border-green-600 text-center shadow-md shadow-gray-600  dark:shadow-sm bg-slate-100 dark:bg-slate-800  md:hover:scale-105 transform transition-all duration-300">
         <a href="#!">
-          <div className="flex  p-4  dark:text-white tems-center justify-between">
+          <div className="flex  p-2  dark:text-white items-center justify-between">
             <p>{name}</p>
             <p>{price} €/Stunde</p>
           </div>

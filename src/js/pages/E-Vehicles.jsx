@@ -43,8 +43,20 @@ function EVehicles() {
 
   const navigate = useNavigate();
 
+  const sortByPrice = (ascending = true) => {
+    const sortedVehicles = [...cars].sort((a, b) => {
+      return ascending ? a.price - b.price : b.price - a.price;
+    });
+    setCars(sortedVehicles);
+  }
 
-  function closeModle () {
+  const sortByName = (ascending = true) => {
+    const sortedVehicles = [...cars].sort((a, b) => {
+      return ascending ? a.name.localeCompare(b.name) : b.name.localeCompare(a.name);
+    });
+    setCars(sortedVehicles);
+  }
+  function closeModle() {
     setCarDetails({})
     setShowModal(false)
   }
@@ -108,39 +120,67 @@ function EVehicles() {
   ]);
 
   return (
-  <>
-    <div className="flex justify-center  items-center mb-10   h-fit md:min-h-screen  md:flex flex-wrap pt-10 pb-10">
+    <>
+      <div className="flex justify-center  items-center mb-10   h-fit md:min-h-screen  md:flex flex-wrap pt-10 pb-10">
 
-      {cars.map((car) => (
-        <div
-          key={car._id}
-          className=" mt-24 md:mt-20"
-          onClick={() => handleShowModle(car)}
-        >
-          <Card
-            imageUrls={car.imageUrls}
-            name={car.name}
-            price={car.price}
-            vehicleId={car._id} 
-            
-          />
+        <div className="flex flex-col gap-12 pt-24">
+          <section className="text-green-700">
+            <li>
+                <strong>Auswahl eines Fahrzeugs:</strong> Die Webseite zeigt Ihnen verschiedene Elektrofahrzeuge mit Name und Preis pro Stunde an. Sie können die Liste nach dem Namen (A-Z oder Z-A) oder Preis (aufsteigend oder absteigend) sortieren, um die Auswahl zu erleichtern.
+
+            </li>
+            <li>
+               <strong>Anzeigen von Fahrzeugdetails:</strong> Klicken Sie auf das Bild eines Fahrzeugs, um mehr Details anzuzeigen. Eine Popup-Seite wird geöffnet, die zusätzliche Informationen wie Reichweite, Ladezeit, Gewicht und die verfügbare Menge zeigt.
+
+            </li>
+            <li>
+               <strong>Buchungszeitraum auswählen:</strong> Auf der Detailseite können Sie Ihren gewünschten Buchungszeitraum auswählen. Geben Sie das Startdatum und die Startzeit sowie das Enddatum und die Endzeit Ihrer Buchung ein.
+
+            </li>
+            <li>
+              <strong>Buchung durchführen: </strong> Nachdem Sie den gewünschten Zeitraum ausgewählt haben, können Sie auf die Schaltfläche "Buchen" klicken, um das Fahrzeug für den ausgewählten Zeitraum zu reservieren.
+
+            </li>
+
+          </section>
+          <button className=" m-auto  tracking-wider  md:mt-0 rounded-sm  shadow-md dark:shadow-sm shadow-gray-400 bg-green-600 p-3 px-6 font-base  text-gray-200 hover:bg-green-500  " onClick={() => sortByPrice(true)}>Sortieren nach Preis aufsteigend</button>
+          <button className=" m-auto  tracking-wider  md:mt-0 rounded-sm  shadow-md dark:shadow-sm shadow-gray-400 bg-green-600 p-3 px-6 font-base  text-gray-200 hover:bg-green-500  " onClick={() => sortByPrice(false)}> Sortieren nach Preis absteigend </button>
+
+          <button className=" m-auto  tracking-wider  md:mt-0 rounded-sm  shadow-md dark:shadow-sm shadow-gray-400 bg-green-600 p-3 px-6 font-base  text-gray-200 hover:bg-green-500  " onClick={() => sortByName(true)}>Sortieren nach Name A-Z</button>
+          <button className=" m-auto  tracking-wider  md:mt-0 rounded-sm  shadow-md dark:shadow-sm shadow-gray-400 bg-green-600 p-3 px-6 font-base  text-gray-200 hover:bg-green-500  " onClick={() => sortByName(false)}>Sortieren nach Name Z-A</button>
+
         </div>
-      ))}
-    </div>
-          {showModal && (
-            <EFahrzeugModal
-              imageUrls={carDetails.imageUrls}
-              name={carDetails.name}
-              type={carDetails.type}
-              driveRange={carDetails.driveRange}
-              price={carDetails.price}
-              chargingTime={carDetails.chargingTime}
-              weight={carDetails.weight}
-              vehicleId={carDetails._id}
-              quantity={carDetails.quantity}
-              closeModle={closeModle}
+
+        {cars.map((car) => (
+          <div
+            key={car._id}
+            className=" mt-24 md:mt-20"
+            onClick={() => handleShowModle(car)}
+          >
+            <Card
+              imageUrls={car.imageUrls}
+              name={car.name}
+              price={car.price}
+              vehicleId={car._id}
+
             />
-          )}</>
+          </div>
+        ))}
+      </div>
+      {showModal && (
+        <EFahrzeugModal
+          imageUrls={carDetails.imageUrls}
+          name={carDetails.name}
+          type={carDetails.type}
+          driveRange={carDetails.driveRange}
+          price={carDetails.price}
+          chargingTime={carDetails.chargingTime}
+          weight={carDetails.weight}
+          vehicleId={carDetails._id}
+          quantity={carDetails.quantity}
+          closeModle={closeModle}
+        />
+      )}</>
   );
 }
 

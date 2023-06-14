@@ -19,7 +19,7 @@ function MainPage() {
   return (
 
     <div className='pt-20 h-[95vh]'>
-      <div className="flex justify-between  bg-no-repeat px-1  md:w-auto h-[16vh] md:h-[20vh] lg:h-[25vh] xl:h-[40vh]"
+      <div className="flex justify-between border-2 border-t-green-500 h-[40vh] md:h-[20vh] lg:h-[25vh] xl:h-[40vh]"
         style={{
           backgroundImage: "url('/images/Stay Eco with our Vehicles.png')",
           backgroundPosition: "center",
