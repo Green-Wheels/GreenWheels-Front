@@ -69,7 +69,7 @@ function EVehicles() {
       }
 
       const response = await axios.get(
-        "https:/g5-greenwheels-backend-2ilc.onrender.com/vehicles?" + queryParams.toString()
+        "https://g5-greenwheels-backend-2ilc.onrender.com/vehicles?" + queryParams.toString()
       );
       const aggregatedVehicles = aggregateVehicleData(
         response.data,
@@ -86,7 +86,6 @@ function EVehicles() {
       const response = await axios.get(
         "https://g5-greenwheels-backend-2ilc.onrender.com/api/vehicleCounts"
       );
-      // console.log('Fetched vehicle counts:', response.data); // Neue Zeile
       setVehicleCounts(response.data);
     } catch (error) {
       console.error("Error fetching vehicle counts:", error);
@@ -94,12 +93,9 @@ function EVehicles() {
   }
   function handleShowModle(carDetails) {
     setCarDetails(carDetails);
-    // console.log({carDetails})
     setShowModal(true);
   }
-  //console.log(vehicleCounts);
 
-  //console.log(cars);
   useEffect(() => {
     fetchVehicles();
     fetchVehicleCounts();

@@ -19,14 +19,11 @@ function MainPage() {
   return (
 
     <div className='pt-20 h-[95vh]'>
-      <div className="flex justify-between w-full bg-cover bg-no-repeat px-1  md:w-auto h-[16vh] md:h-[20vh] lg:h-[25vh] xl:h-[40vh]"
+      <div className="flex justify-between  bg-no-repeat px-1  md:w-auto h-[16vh] md:h-[20vh] lg:h-[25vh] xl:h-[40vh]"
         style={{
-          backgroundImage: "url('/images/www.reallygreatsite.com.png')",
-          backgroundSize: "70%",
+          backgroundImage: "url('/images/Stay Eco with our Vehicles.png')",
           backgroundPosition: "center",
-
           backgroundRepeat: "no-repeat",
-
         }}
       ></div>
 
@@ -56,10 +53,12 @@ function MainPage() {
 
       <div className='flex w-10/12 pb-5'>
         <img className='w-1/3 h-1/2 p-10' src="/images/GreenWheels.png" alt="" />
-        <p className='p-5 px-20 font-semibold'>
-          <h1 className='text-green-500  text-3xl'>Gewohnter Fahrspaß, neue Möglichkeiten. Entdecken Sie Elektromobilität mit
+
+        
+        <div className='p-5 px-20 font-semibold'>
+          <h1 className='text-green-500  text-3xl'>Gewohnter Fahrspaß, neue Möglichkeiten. Entdecken Sie Elektromobilität mit</h1>
             <h1 className="text-6xl pb-5 text-green-600">Green <span className='text-gray-600'>Wheels</span> </h1>
-          </h1>
+          
 
           Elektromobilität mag für einige ein neues und anfangs vielleicht verunsicherndes Thema sein, in der Realität ist es jedoch wesentlich einfacher als gedacht. Wir liefern Ihnen alle Informationen zu den wichtigsten Fragen rund um Elektromobilität, damit Sie sich für Ihre nächste Fahrt in einem unserer vollelektrischen Premium-Fahrzeuge vollkommen sicher und ideal vorbereitet fühlen. In unseren FAQs finden Sie Antworten auf folgende Fragen:
 
@@ -76,7 +75,7 @@ function MainPage() {
           </li>
           <li>                    Weitere Rabatte & Vorteile mit Elektrofahrzeugen für Geschäftskunden
           </li>
-        </p>
+        </div>
       </div>
 
 
