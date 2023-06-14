@@ -79,7 +79,7 @@ function Register(props) {
         successMsg
       ) : (
         <form className=" md:h-screen  h-[83vh] pt-16 md:pt-20  " onSubmit={submitHandler}>
-          <div className=" w-full  max-w-lg flex flex-col gap-3 justify-start items-start md:shadow-xl  md:border  md:rounded-xl px-10 md:py-14 ">
+          <div className=" w-full  max-w-lg flex flex-col gap-3 justify-start items-start md:shadow-xl  md:border border-2 border-green-400 md:rounded-xl px-10 md:py-14 ">
             <label
               className=" text-green-600 dark:text-green-500  text-xl font-base m-0"
               htmlFor="username"
