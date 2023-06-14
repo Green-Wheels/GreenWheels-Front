@@ -35,7 +35,7 @@ function MainPage() {
     <div className='pt-20 h-[95vh]'>
         <div className="flex justify-between w-full bg-cover bg-no-repeat px-1  md:w-auto h-[16vh] md:h-[20vh] lg:h-[25vh] xl:h-[40vh]"
             style={{
-              backgroundImage: "url('public/images/www.reallygreatsite.com.png')",
+              backgroundImage: "url('/images/www.reallygreatsite.com.png')",
                 backgroundSize: "70%",
                 backgroundPosition:"center",
                 
