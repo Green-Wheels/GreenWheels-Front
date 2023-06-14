@@ -1,5 +1,4 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import  { useState,useEffect } from "react";
 import "../scss/App.scss";
 
 
@@ -43,7 +42,6 @@ function App() {
           
         </Routes>
 
-         <Footer /> 
 
       </BrowserRouter>
 

@@ -69,7 +69,7 @@ function EVehicles() {
       }
 
       const response = await axios.get(
-        "https://g5-greenwheels-backend-2ilc.onrender.com/vehicles?" + queryParams.toString()
+        "https:/g5-greenwheels-backend-2ilc.onrender.com/vehicles?" + queryParams.toString()
       );
       const aggregatedVehicles = aggregateVehicleData(
         response.data,
