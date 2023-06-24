@@ -1,36 +1,34 @@
-import React from "react";
+import React from 'react';
+import log from "../../assets/logo.webp"
 
-import useAuthStore from '../hooks/useAuthStore';
-
-const Icons = [
- { name: "logo-facebook", link: "#" },
- { name: "logo-twitter", link: "#" },
- { name: "logo-github", link: "#" },
- { name: "logo-linkedin", link: "#" },
- { name: "logo-instagram", link: "#" },
-];
 function Footer() {
-    const authStore = useAuthStore();
-
-    return (
-        <>
-
-
-
-            <footer className="bg-white  rounded-lg shadow  dark:bg-gray-800">
-                <div className="w-full mx-auto p-4 md:flex md:items-center md:justify-between">
-                    <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2023
-                        <a href="https://flowbite.com/" className="hover:underline">Green Wheels</a>
-                        . All Rights Reserved. </span>
-                    <ul className="flex flex-wrap items-center mt-3 text-sm font-medium text-gray-500 dark:text-gray-400 sm:mt-0"> <li>
-                        <a href="#" className="mr-4 hover:underline md:mr-6 ">About
-                        </a> </li> <li> <a href="#" className="mr-4 hover:underline md:mr-6">Privacy Policy</a>
-                        </li> <li> <a href="#" className="mr-4 hover:underline md:mr-6">Licensing</a> </li> <li>
-                            <a href="#" className="hover:underline">Contact</a> </li> </ul> </div> </footer>
-
-
-        </>
-    );
+  return (
+    <footer className="bg-white dark:bg-gray-900">
+      <div className="mx-auto w-full max-w-screen-xl p-4 py-5 lg:py-8">
+        <div className="md:flex md:justify-between">
+          <div className="mb-6 md:mb-0">
+            <a href="#" className="flex items-center">
+            <img src={log} className=" h-16 w-16 p-3" />
+              <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Green Wheels</span>
+            </a>
+          </div>
+          <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
+            {/* Similar code for other parts of the footer */}
+          </div>
+        </div>
+        <hr className="my-6 border-green-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
+        <div className="sm:flex sm:items-center sm:justify-between">
+          <span className="text-sm text-green-500 sm:text-center dark:text-gray-400">© 2023 <a href="https://flowbite.com/" className="hover:underline">GreenWheels</a>. All Rights Reserved.
+          </span>
+          <div className="flex mt-4 space-x-6 sm:justify-center sm:mt-0">
+            <a href="{}" className="text-gray-500 hover:text-gray-900 dark:hover:text-white">
+              {/* SVGs and other footer components */}
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
 }
 
 export default Footer;

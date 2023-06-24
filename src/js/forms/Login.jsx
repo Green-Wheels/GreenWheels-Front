@@ -2,8 +2,8 @@ import { useState, useEffect } from 'react';
 import axios from 'axios';
 import useAuthStore from '../hooks/useAuthStore';
 import { useLocation, useNavigate } from 'react-router-dom';
-/* import EmailVerificationForm from './EmailVerificationForm'; */
- 
+/* import EmailVerificationForm from './EmailVerificationForm'; 
+ */ 
 
 function Login() {
     const [username, setUsername] = useState('');
@@ -40,7 +40,7 @@ function Login() {
             
 
             authStore.authenticate(resp.data);
-            // localStorage.setItem('token', resp.data.token);
+            localStorage.setItem('token', resp.data.token);
             // sessionStorage.setItem('token', resp.data.token);
 
             setUsername('');

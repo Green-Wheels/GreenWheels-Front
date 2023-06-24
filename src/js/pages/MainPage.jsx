@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import Typewriter from "../features/typeWriterEffect";
+import Footer from "../pages/Footer";
 
 function MainPage() {
   const navigate = useNavigate();
@@ -77,9 +78,7 @@ function MainPage() {
           </li>
         </div>
       </div>
-
-
-
+<Footer></Footer>
     </div>
   );
 }
