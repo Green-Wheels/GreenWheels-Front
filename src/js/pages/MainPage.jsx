@@ -20,7 +20,7 @@ function MainPage() {
   return (
 
     <div className='pt-20 h-[95vh]'>
-      <div className="flex justify-between border-2 border-t-green-500 h-[40vh] md:h-[20vh] lg:h-[25vh] xl:h-[40vh]"
+      <div className="flex justify-between h-[40vh] md:h-[20vh] lg:h-[25vh] xl:h-[40vh]"
         style={{
           backgroundImage: "url('/images/Stay Eco with our Vehicles.png')",
           backgroundPosition: "center",
@@ -40,13 +40,7 @@ function MainPage() {
           zu unseren Fahrzeuge
 
         </button>
-
-
-
       </div>
-
-
-
 
       <div>
         <h1 className='text-center pt-20 font-semibold text-2xl'>Alle Fragen zu Elektro-Fahrzeugen - E einfach erklärt:</h1>

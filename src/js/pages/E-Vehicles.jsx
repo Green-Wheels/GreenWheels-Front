@@ -121,33 +121,33 @@ function EVehicles() {
 
   return (
     <>
-      <div className="flex justify-center  items-center mb-10   h-fit md:min-h-screen  md:flex flex-wrap pt-10 pb-10">
+      <div className="flex justify-center  items-center   h-fit md:min-h-screen  md:flex flex-wrap pt-24 pb-10">
+        <button className="m-auto  tracking-wider  md:mt-0 rounded-sm  shadow-md dark:shadow-sm shadow-gray-400 bg-green-600 p-3 px-6 font-base  text-gray-200 hover:bg-green-500  " onClick={() => sortByPrice(true)}>Sortieren nach Preis aufsteigend</button>
+        <button className=" m-auto  tracking-wider  md:mt-0 rounded-sm  shadow-md dark:shadow-sm shadow-gray-400 bg-green-600 p-3 px-6 font-base  text-gray-200 hover:bg-green-500  " onClick={() => sortByPrice(false)}> Sortieren nach Preis absteigend </button>
 
-        <div className="flex flex-col gap-12 pt-24">
-          <section className="text-green-700">
-            <li>
-                <strong>Auswahl eines Fahrzeugs:</strong> Die Webseite zeigt Ihnen verschiedene Elektrofahrzeuge mit Name und Preis pro Stunde an. Sie können die Liste nach dem Namen (A-Z oder Z-A) oder Preis (aufsteigend oder absteigend) sortieren, um die Auswahl zu erleichtern.
+        <button className=" m-auto  tracking-wider  md:mt-0 rounded-sm  shadow-md dark:shadow-sm shadow-gray-400 bg-green-600 gap-1 p-3 px-6 font-base  text-gray-200 hover:bg-green-500  " onClick={() => sortByName(true)}>Sortieren nach Name A-Z</button>
+        <button className=" m-auto  tracking-wider  md:mt-0 rounded-sm  shadow-md dark:shadow-sm shadow-gray-400 bg-green-600 p-3 px-6 font-base  text-gray-200 hover:bg-green-500  " onClick={() => sortByName(false)}>Sortieren nach Name Z-A</button>
 
-            </li>
-            <li>
-               <strong>Anzeigen von Fahrzeugdetails:</strong> Klicken Sie auf das Bild eines Fahrzeugs, um mehr Details anzuzeigen. Eine Popup-Seite wird geöffnet, die zusätzliche Informationen wie Reichweite, Ladezeit, Gewicht und die verfügbare Menge zeigt.
+        <div className="flex flex-col pt-24">
+          <section className="text-green-700 w-1/2">            
 
-            </li>
-            <li>
-               <strong>Buchungszeitraum auswählen:</strong> Auf der Detailseite können Sie Ihren gewünschten Buchungszeitraum auswählen. Geben Sie das Startdatum und die Startzeit sowie das Enddatum und die Endzeit Ihrer Buchung ein.
+            <p>
+              <strong>Auswahl eines Fahrzeugs:</strong> Die Webseite zeigt Ihnen verschiedene Elektrofahrzeuge mit Name und Preis pro Stunde an. Sie können die Liste nach dem Namen (A-Z oder Z-A) oder Preis (aufsteigend oder absteigend) sortieren, um die Auswahl zu erleichtern.
 
-            </li>
-            <li>
+            </p>
+            <p>
+              <strong>Anzeigen von Fahrzeugdetails:</strong> Klicken Sie auf das Bild eines Fahrzeugs, um mehr Details anzuzeigen. Eine Popup-Seite wird geöffnet, die zusätzliche Informationen wie Reichweite, Ladezeit, Gewicht und die verfügbare Menge zeigt.
+
+            </p>
+            <p>
+              <strong>Buchungszeitraum auswählen:</strong> Auf der Detailseite können Sie Ihren gewünschten Buchungszeitraum auswählen. Geben Sie das Startdatum und die Startzeit sowie das Enddatum und die Endzeit Ihrer Buchung ein.
+
+            </p>
+            <p>
               <strong>Buchung durchführen: </strong> Nachdem Sie den gewünschten Zeitraum ausgewählt haben, können Sie auf die Schaltfläche "Buchen" klicken, um das Fahrzeug für den ausgewählten Zeitraum zu reservieren.
 
-            </li>
-
+            </p>
           </section>
-          <button className=" m-auto  tracking-wider  md:mt-0 rounded-sm  shadow-md dark:shadow-sm shadow-gray-400 bg-green-600 p-3 px-6 font-base  text-gray-200 hover:bg-green-500  " onClick={() => sortByPrice(true)}>Sortieren nach Preis aufsteigend</button>
-          <button className=" m-auto  tracking-wider  md:mt-0 rounded-sm  shadow-md dark:shadow-sm shadow-gray-400 bg-green-600 p-3 px-6 font-base  text-gray-200 hover:bg-green-500  " onClick={() => sortByPrice(false)}> Sortieren nach Preis absteigend </button>
-
-          <button className=" m-auto  tracking-wider  md:mt-0 rounded-sm  shadow-md dark:shadow-sm shadow-gray-400 bg-green-600 p-3 px-6 font-base  text-gray-200 hover:bg-green-500  " onClick={() => sortByName(true)}>Sortieren nach Name A-Z</button>
-          <button className=" m-auto  tracking-wider  md:mt-0 rounded-sm  shadow-md dark:shadow-sm shadow-gray-400 bg-green-600 p-3 px-6 font-base  text-gray-200 hover:bg-green-500  " onClick={() => sortByName(false)}>Sortieren nach Name Z-A</button>
 
         </div>
 
@@ -183,5 +183,6 @@ function EVehicles() {
       )}</>
   );
 }
-
+/* Dies ist eine funktionskomponente, die für jedes Fahrzeug-Objekt in der als Prop übergebenen Array von Fahrzeugen eine Karte rendert. Die Karte zeigt das Fahrzeugbild, den Namen und den Preis an. Die Komponente hat auch einen onClick-Ereignishandler, der die Funktion handleShowModle mit der ID des Fahrzeugs als Argument aufruft, wenn die Karte geklickt wird. Dies ist wahrscheinlich verwendet, um ein Modal oder andere UI-Element anzuzeigen, das Informationen über das Fahrzeug anzeigt.
+ */
 export default EVehicles;

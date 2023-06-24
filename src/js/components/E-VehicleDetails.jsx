@@ -39,7 +39,7 @@ function Card({
   return (
 
 
-    <div className="flex h-full justify-center items-center w-full  ">
+    <div className="flex justify-center items-center w-full  ">
       <div className="flex  justify-center items-center m-0 ">
         <div className=" p-4   rounded-lg  border-2  border-green-500 dark:border-green-600 text-center shadow-md shadow-gray-600  dark:shadow-sm bg-slate-100 dark:bg-slate-800  md:hover:scale-105 transform transition-all duration-300">
         <a href="#!">
