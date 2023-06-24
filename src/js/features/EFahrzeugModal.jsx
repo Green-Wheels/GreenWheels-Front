@@ -162,9 +162,9 @@ export default function EFahrzeugModal({
         
         
         
-        <div className=" hidden  md:inline-block  w-full lg:w-1/2 items-center  p-2  lg:order-1">
+        <div className=" hidden  md:inline-block  w-full lg:w-1/2 items-center  p-2 pt-20 lg:order-1">
           <img
-            className="rounded-md h-full w-full md:pt-0 object-cover max-h-[190px] md:max-h-[250px] lg:max-h-full"
+            className="rounded-md w-full md:pt-0 object-cover max-h-[190px] md:max-h-[250px] lg:max-h-full"
             src={imageUrls}
             alt=""
           />

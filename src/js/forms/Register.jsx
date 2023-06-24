@@ -74,7 +74,7 @@ function Register(props) {
   });
 
   return (
-    <div className="  pt-20 justify-center items-center max-w-screen-m md:my-5  ">
+    <div className=" login-register-bg pt-20 justify-center items-center max-w-screen-m md:my-5  ">
       {registerSuccessful ? (
         successMsg
       ) : (

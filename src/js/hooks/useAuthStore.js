@@ -41,6 +41,7 @@ const useAuthStore = create((set) => ({
             Authorization: `Bearer ${token}`,
           },
         });
+        
         set({ user: res.data });
       } catch (err) {
         console.log(err);
